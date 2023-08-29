@@ -1,5 +1,5 @@
 # ContactManager
-This is a project for COP 4331 (Processes of Object-Oriented Software Development) hosted at cop4331group2.com (http://64.225.60.52/)
+This is a project for COP 4331 (Processes of Object-Oriented Software Development) hosted at http://cop4331group2.com (http://64.225.60.52/)
 
 It is a simple contact manager that allows a registered user to create, read (search), update, and delete contacts.
 
