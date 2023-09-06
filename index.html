@@ -2,19 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/styles.css">
         <title>Login</title>
     </head>
-    <header>
-        <h1>Contact Manager</h1>
-    </header>
-    <body>
-        <form id="loginForm">
+
+    <body class="container">
+        <!--Semantic form tag; represents login box-->
+        <form id="loginForm" class="login">
             <h2>Login</h2>
 
+            <!--Username and password input boxes-->
             <input id="username" type="text" placeholder="Username" required>
-            <input id="username" type="text" placeholder="Password" required>
+            <input id="password" type="text" placeholder="Password" required>
 
+            <!--Submit button-->
             <input id="submit" type="submit" value="Log in">
         </form>
     </body>
+
 </html>

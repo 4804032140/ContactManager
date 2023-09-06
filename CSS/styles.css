@@ -1,0 +1,28 @@
+html {
+    font-size: 16;
+    background-color: azure;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+.login {
+    background-color: aliceblue;
+    padding: 2vh 2vw;
+    display: flex;
+    flex-grow: 0px;
+    flex-shrink: 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.login input {
+    margin: 1vh 1vw;
+}
