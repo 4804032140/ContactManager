@@ -58,8 +58,9 @@ CREATE TABLE `Users` (
   `LastName` varchar(50) NOT NULL DEFAULT '',
   `Login` varchar(50) NOT NULL DEFAULT '',
   `Password` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `Login` (`Login`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,7 +69,7 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (1,'2023-08-28 16:52:16','2023-08-28 16:52:16','Istiaqul','Alam','IstiaqulA','z23S^8'),(2,'2023-08-28 16:52:33','2023-08-28 16:52:33','Monica','Castro-Suarez','MonicaC','74^4Kj'),(3,'2023-08-28 16:52:59','2023-08-28 16:52:59','Joseph','Finfrock','JosephF','1*E6c3'),(4,'2023-08-28 16:53:11','2023-08-28 16:53:11','Allen','Lin','AllenL','Gf!098'),(5,'2023-08-28 16:53:19','2023-08-28 16:53:19','Marieclaire','Reyes','MarieclaireR','#2xV97'),(6,'2023-08-28 16:53:27','2023-08-28 16:53:27','Ashton','Williams','AshtonW','y0C48&');
+INSERT INTO `Users` VALUES (1,'2023-09-07 19:30:42','2023-09-07 19:30:42','Istiaqul','Alam','IstiaqulA','z235^8'),(2,'2023-09-07 19:30:54','2023-09-07 19:30:54','Monica','Castro-Suarez','MonicaC','74^4Kj'),(3,'2023-09-07 19:31:05','2023-09-07 19:31:05','Joseph','Finfrock','JosephF','1*E6c3'),(4,'2023-09-07 19:31:24','2023-09-07 19:31:24','Allen','Lin','AllenL','Gf!098'),(5,'2023-09-07 19:31:36','2023-09-07 19:31:36','Marieclaire','Reyes','MarieclaireR','#2xV97'),(6,'2023-09-07 19:31:46','2023-09-07 19:31:46','Ashton','Williams','AshtonW','y0C48&'),(8,'2023-09-07 19:35:25','2023-09-07 19:35:25','Test','User','TestUser','Password');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -81,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-05 23:39:09
+-- Dump completed on 2023-09-07 19:39:30
