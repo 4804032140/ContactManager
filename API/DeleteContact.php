@@ -1,7 +1,7 @@
 <?php
 	$inData = getRequestInfo();
 	
-	$userId = $inData["Users"]; 
+	$contactId = $inData["contactId"];
     
 	$conn = new mysqli("localhost", "TheBeast", "WeLoveCOP4331", "COP4331");
 	if ($conn->connect_error) 
@@ -10,8 +10,8 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("DELETE FROM Contacts WHERE UserID = ?");
-		$stmt->bind_param("i", $userId);
+		$stmt = $conn->prepare("DELETE FROM Contacts WHERE ID = ?");
+		$stmt->bind_param("i", $contactId);
 		$stmt->execute();
 
 		if ($stmt->affected_rows > 0) {
@@ -30,4 +30,13 @@
 
 	function sendResultInfoAsJson( $obj )
 	{
-		header('Content-type
+		header('Content-type: application/json');
+		echo $obj;
+	}
+	
+	function returnWithError( $err )
+	{
+		$retValue = '{"error":"' . $err . '"}';
+		sendResultInfoAsJson( $retValue );
+	}
+?>
