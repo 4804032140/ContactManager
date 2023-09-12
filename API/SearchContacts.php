@@ -1,6 +1,10 @@
 <?php
 
 	$inData = getRequestInfo();
+
+	$firstName = $inData["firstName"];
+	$lastName = $inData["lastName"];
+	$userId = $inData["userId"];
 	
 	$searchResults = "";
 	$searchCount = 0;
@@ -12,9 +16,9 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("SELECT Name from Contacts where Name like ? and UserID=?");
+		$stmt = $conn->prepare("SELECT * from Contacts where FirstName like ? or LastName like ? and ID = ?");
 		$colorName = "%" . $inData["search"] . "%";
-		$stmt->bind_param("ss", $colorName, $inData["userId"]);
+		$stmt->bind_param("ssi", $firstName, $lastName, $userId);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
@@ -26,7 +30,7 @@
 				$searchResults .= ",";
 			}
 			$searchCount++;
-			$searchResults .= '"' . $row["Name"] . '"';
+			$searchResults .= '"' . $row["FirstName"] . " " . $row["LastName"] . '"';
 		}
 		
 		if( $searchCount == 0 )
