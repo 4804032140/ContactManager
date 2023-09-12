@@ -2,8 +2,7 @@
 
 	$inData = getRequestInfo();
 
-	$firstName = $inData["firstName"];
-	$lastName = $inData["lastName"];
+	$name = $inData["name"];
 	$userId = $inData["userId"];
 	
 	$searchResults = "";
@@ -16,9 +15,9 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("SELECT * from Contacts where FirstName like ? or LastName like ? and ID = ?");
-		$colorName = "%" . $inData["search"] . "%";
-		$stmt->bind_param("ssi", $firstName, $lastName, $userId);
+		$stmt = $conn->prepare("SELECT * from Contacts where (CONCAT(FirstName, ' ', LastName) like ?) and UserID = ?");
+		$name = "%" . $name . "%";
+		$stmt->bind_param("si", $name, $userId);
 		$stmt->execute();
 		
 		$result = $stmt->get_result();
