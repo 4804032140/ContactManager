@@ -9,20 +9,24 @@
         <title>Login</title>
     </head>
 
-    <body class="container">
+    <body class="bg-transparent d-flex justify-content-center align-items-center align-content-center p-3" style="min-height: 100vh;">
         <!--Semantic form tag; represents login box-->
-        <form id="loginForm" class="login">
-            <h2>Login</h2>
+        <form id="loginForm" class="text-center bg-secondary bg-opacity-25 p-5 d-flex flex-column justify-content-center align-items-center">
+
+            <h2 class="text-center" style="padding-bottom: 1rem;">Login</h2>
 
             <!--Username and password input boxes-->
-            <input id="username" type="text" placeholder="Username" required>
-            <input id="password" type="text" placeholder="Password" required>
+            <label class="h5" for="username">Username:</label>
+            <input class="rounded-pill p-2 mb-4" id="username" type="text" placeholder="Username" required>
+    
+            <label class="h5" for="password">Password:</label>
+            <input class="rounded-pill p-2 mb-4" id="password" type="password" placeholder="Password" required>
 
             <!--Submit button-->
-            <input id="submit" type="submit" value="Log in">
+            <input class="btn btn-lg btn-success rounded mb-4" id="submit" type="submit" value="Log in">
 
             <!--Register hyperlink-->
-            <a href="html/register.html">Create an Account</a>
+            <a class="btn btn-sm bg-success text-white rounded" href="html/register.html">Create an Account</a>
         </form>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

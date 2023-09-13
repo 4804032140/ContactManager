@@ -4,37 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
     <title>Contacts</title>
 </head>
-<body class="row">
+<body class="row bg-transparent">
 
-    <aside class="col-2 d-flex flex-column text-white bg-dark flex-shrink-0 p-3">
+    <aside class="col-2 d-flex flex-column text-white bg-primary-subtle flex-shrink-0 p-3">
         <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="contacts.html" class="nav-link">Contacts</a>
+            <li class="nav-item m-1">
+                <a href="contacts.html" class="nav-link bg-dark-subtle">Contacts</a>
             </li>
-            <li class="nav-item">
-                <a href="about.html" class="nav-link">About Us</a>
+            <li class="nav-item m-1">
+                <a href="about.html" class="nav-link bg-dark-subtle">About Us</a>
             </li>
-            <li class="nav-item">
-                <a href="https://github.com/4804032140/ContactManager" target="_blank" class="nav-link">Project Repo</a>
+            <li class="nav-item m-1">
+                <a href="https://github.com/4804032140/ContactManager" target="_blank" class="nav-link bg-dark-subtle">Project Repo</a>
             </li>
         </ul>
         <hr>
         <a href="../index.html" class="nav-item text-sm">Log Out</a>
     </aside>
 
-    <header class="col-10 d-flex justify-content-center align-content-center align-items-start">
+    <header class="bg-transparent col-10 d-flex justify-content-center align-content-center align-items-start">
         <div class="border p-1 w-100">
 
             <input type="text" placeholder="Search" class="rounded-pill p-2">
 
-            <button class="btn btn-primary text-center m-1">
-                Add Contacts
+            <button class="btn text-center m-1">
+                <i class="bi-person-fill-add" style="font-size: 2rem;"></i>
             </button>
     
-            <button class="btn btn-secondary text-center m-1">
-                Refresh
+            <button class="btn text-center m-1">
+                <i class="bi-arrow-repeat" style="font-size: 2rem;"></i>
             </button>
 
             <table class="table mw-100">

@@ -1,17 +1,20 @@
 html {
     font-size: 16;
     background-color: azure;
+    background-image: url("../images/forestCropped.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 85vh;
-}
+} */
 
-.login {
+/* .login {
     background-color: aliceblue;
     padding: 2vh 2vw;
     display: flex;
@@ -21,8 +24,8 @@ html {
     align-items: center;
     align-content: center;
     flex-direction: column;
-}
+} */
 
-.login input {
+/* .login input {
     margin: 1vh 1vw;
-}
+} */

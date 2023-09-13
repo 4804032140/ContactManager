@@ -4,26 +4,46 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <title>Register</title>
     </head>
 
-    <body class="container">
-        <!--Semantic form tag; represents registration box-->
-        <form id="registrationForm" class="login">
-            <h2>Create an Account</h2>
+    <body class="bg-transparent d-flex justify-content-center align-items-center align-content-center p-3" style="min-height: 100vh;">
+        <!--Semantic form tag; represents login box-->
+        <form id="loginForm" class="text-center bg-secondary bg-opacity-25 p-5 d-flex flex-column justify-content-center align-items-center">
 
-            <!--Info input boxes-->
-            <input id="firstName" type="text" placeholder="First Name" required>
-            <input id="lastName" type="text" placeholder="Last Name" required>
-            <input id="username" type="text" placeholder="Username" required>
-            <input id="password" type="text" placeholder="Password" required>
+            <h2 class="text-center" style="padding-bottom: 1rem;">Login</h2>
+
+            <!--Username and password input boxes-->
+            <div class="row">
+                <div class="col">
+                    <label class="h5" for="username">Username:</label>
+                    <input class="rounded-pill p-2 mb-4" id="username" type="text" placeholder="Username" required>
+                
+                    <label class="h5" for="password">Password:</label>
+                    <input class="rounded-pill p-2 mb-4" id="password" type="password" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="h5" for="phone">Phone:</label>
+                    <input class="rounded-pill p-2 mb-4" id="phone" type="text" placeholder="Username" required>
+                
+                    <label class="h5" for="email">Email:</label>
+                    <input class="rounded-pill p-2 mb-4" id="email" type="password" placeholder="Password" required>
+                </div>
+            </div>
 
             <!--Submit button-->
-            <input id="submit" type="submit" value="Register">
+            <input class="btn btn-lg btn-success rounded mb-4" id="submit" type="submit" value="Log in">
 
-            <!--Go back to login screen-->
-            <a href="../index.html">Log In</a>
+            <!--Register hyperlink-->
+            <a class="btn btn-sm bg-success text-white rounded" href="html/register.html">Create an Account</a>
         </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>
 
 </html>
