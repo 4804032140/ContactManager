@@ -1,3 +1,5 @@
+const urlBase = 'http://64.225.60.52/';
+
 function doRegister() 
 {
     
@@ -6,12 +8,12 @@ function doRegister()
     let login = document.getElementById("registerUsername").value;
     let password = document.getElementById("registerPassword").value;
 
-    document.getElementById("registerResult").innerHTML = "";
+    // document.getElementById("registerResult").innerHTML = "";
 
     let tmp = {FirstName: firstName, LastName: lastName, login: login, password: password};
     let jsonPayload = JSON.stringify(tmp);
     
-    let url = urlBase + '/AddUser.php';
+    let url = urlBase + 'LAMPAPI/AddUser.php';
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
@@ -26,16 +28,16 @@ function doRegister()
 
                 if (jsonObject.error === "") 
                 {        
-                    window.location.href = "index.html";
+                    window.location.href = "../index.html";
                 } else 
                 {
-                    document.getElementById("registerResult").innerHTML = jsonObject.error;
+                    // document.getElementById("registerResult").innerHTML = jsonObject.error;
                 }
             }
         };
         xhr.send(jsonPayload);
     } catch(err) 
     {
-        document.getElementById("registerResult").innerHTML = err.message;
+        // document.getElementById("registerResult").innerHTML = err.message;
     }
 }

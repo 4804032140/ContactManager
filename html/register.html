@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+        <script type="text/javascript" src="../js/register.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <title>Register</title>
@@ -18,25 +19,25 @@
             <!--Username and password input boxes-->
             <div class="row">
                 <div class="col">
-                    <label class="h5" for="username">Username:</label>
-                    <input class="rounded-pill p-2 mb-4" id="username" type="text" placeholder="Username" required>
+                    <label class="h5" for="registerFirstName">First Name:</label>
+                    <input class="rounded-pill p-2 mb-4" id="registerFirstName" type="text" placeholder="First Name" required>
                 
-                    <label class="h5" for="password">Password:</label>
-                    <input class="rounded-pill p-2 mb-4" id="password" type="text" placeholder="Password" required>
+                    <label class="h5" for="registerLastName">Last Name:</label>
+                    <input class="rounded-pill p-2 mb-4" id="registerLastName" type="text" placeholder="Last Name" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <label class="h5" for="phone">Phone:</label>
-                    <input class="rounded-pill p-2 mb-4" id="phone" type="text" placeholder="Phone" required>
+                    <label class="h5" for="registerUsername">Username:</label>
+                    <input class="rounded-pill p-2 mb-4" id="registerUsername" type="text" placeholder="Username" required>
                 
-                    <label class="h5" for="email">Email:</label>
-                    <input class="rounded-pill p-2 mb-4" id="email" type="text" placeholder="Email" required>
+                    <label class="h5" for="registerPassword">Password:</label>
+                    <input class="rounded-pill p-2 mb-4" id="registerPassword" type="text" placeholder="Password" required>
                 </div>
             </div>
 
             <!--Submit button-->
-            <input class="btn btn-lg btn-success rounded mb-4" id="submit" type="submit" value="Register">
+            <button onsubmit="return false" type="button" class="btn btn-success btn-lg rounded mb-4" id="register" onclick="doRegister()">Register</button>
 
         </form>
 

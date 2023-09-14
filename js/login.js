@@ -2,7 +2,6 @@ const urlBase = 'http://64.225.60.52/';
 
 function doLogin() 
 {
-    console.log("Hello!")
     
     let login = document.getElementById("loginName").value;
     let password = document.getElementById("loginPassword").value;
@@ -29,9 +28,11 @@ function doLogin()
         
                 if (userId < 1) 
                 {        
-                    document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
+                    // document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
                     return;
                 }
+
+                console.log(userId);
         
                 firstName = jsonObject.firstName;
                 lastName = jsonObject.lastName;
