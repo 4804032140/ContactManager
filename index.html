@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+        <script type="text/javascript" src="js/login.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <title>Login</title>
@@ -16,14 +17,14 @@
             <h2 class="text-center" style="padding-bottom: 1rem;">Login</h2>
 
             <!--Username and password input boxes-->
-            <label class="h5" for="username">Username:</label>
-            <input class="rounded-pill p-2 mb-4" id="username" type="text" placeholder="Username" required>
+            <label class="h5" for="loginName">Username:</label>
+            <input class="rounded-pill p-2 mb-4" id="loginName" type="text" placeholder="Username" required>
     
-            <label class="h5" for="password">Password:</label>
-            <input class="rounded-pill p-2 mb-4" id="password" type="password" placeholder="Password" required>
+            <label class="h5" for="loginPassword">Password:</label>
+            <input class="rounded-pill p-2 mb-4" id="loginPassword" type="password" placeholder="Password" required>
 
             <!--Submit button-->
-            <input class="btn btn-lg btn-success rounded mb-4" id="submit" type="submit" value="Log in">
+            <button class="btn btn-success btn-lg rounded mb-4" id="login" onclick="doLogin()">Log In</button>
 
             <!--Register hyperlink-->
             <a class="btn btn-sm bg-success text-white rounded" href="html/register.html">Create an Account</a>
