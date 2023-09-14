@@ -1,18 +1,18 @@
-const urlBase = 'http://cop4331group2.com/';
+const urlBase = 'http://64.225.60.52/';
 
 function doLogin() 
 {
-    console.log()
+    console.log("Hello!")
     
     let login = document.getElementById("loginName").value;
     let password = document.getElementById("loginPassword").value;
 
-    document.getElementById("loginResult").innerHTML = "";
+    // document.getElementById("loginResult").innerHTML = "";
 
     let tmp = {login: login, password: password};
     let jsonPayload = JSON.stringify(tmp);
     
-    let url = urlBase + '/Login.php';
+    let url = urlBase + 'LAMPAPI/Login.php';
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
@@ -44,7 +44,7 @@ function doLogin()
         xhr.send(jsonPayload);
     } catch(err) 
     {
-        document.getElementById("loginResult").innerHTML = err.message;
+        // document.getElementById("loginResult").innerHTML = err.message;
     }
 }
 
