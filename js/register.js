@@ -31,13 +31,13 @@ function doRegister()
                     window.location.href = "../index.html";
                 } else 
                 {
-                    // document.getElementById("registerResult").innerHTML = jsonObject.error;
+                    document.getElementById("registerResult").innerHTML = "* " + jsonObject.error;
                 }
             }
         };
         xhr.send(jsonPayload);
     } catch(err) 
     {
-        // document.getElementById("registerResult").innerHTML = err.message;
+        document.getElementById("registerResult").innerHTML = "* " + err.message;
     }
 }
