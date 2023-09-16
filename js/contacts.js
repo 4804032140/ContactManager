@@ -15,7 +15,7 @@ function addContacts() {
     };
     let jsonPayload = JSON.stringify(tmp);
 
-    let url = urlBase + '/AddContact.php';
+    let url = urlBase + 'LAMPAPI/AddContact.php';
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);

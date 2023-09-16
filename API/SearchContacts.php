@@ -29,7 +29,7 @@
 				$searchResults .= ",";
 			}
 			$searchCount++;
-			$searchResults .= '"' . $row["FirstName"] . " " . $row["LastName"] . '"';
+			$searchResults .= '"' . $row["ID"] . ",". $row["FirstName"] . "," . $row["LastName"] . "," . $row["Phone"] . "," . $row["Email"] . '"';
 		}
 		
 		if( $searchCount == 0 )
