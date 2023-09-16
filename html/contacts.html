@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="../js/code.js"></script>
+    <script type="text/javascript" src="../js/contacts.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
     rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -24,7 +24,7 @@
             </li>
         </ul>
         <hr>
-        <a href="../index.html" class="nav-item text-sm">Log Out</a>
+        <button type="button" onsubmit="return false" onclick="doLogout()">Log Out</button>
     </aside>
 
     <header class="bg-transparent col-10 d-flex justify-content-center align-content-center align-items-start">
@@ -32,7 +32,7 @@
 
             <input id="searchInput" type="text" placeholder="Search" class="rounded-pill p-2" onkeyup="searchContacts()">
 
-            <button class="btn text-center m-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button id="showAddOffcanvas" class="btn text-center m-1" type="button" onclick="showAddOffcanvas()">
                 <i class="bi-person-fill-add" style="font-size: 2rem;"></i>
             </button>
 
@@ -44,6 +44,8 @@
                 <div class="offcanvas-body">
                   
                     <form class="d-flex flex-column">
+                        <input id="contactId" type="text" style="display: none;">
+
                         <label class="h5" for="firstName">First Name:</label>
                         <input class="rounded-pill p-2 mb-4" id="firstName" type="text" placeholder="First Name" required>
                     
@@ -56,9 +58,11 @@
                         <label class="h5" for="email">Email:</label>
                         <input class="rounded-pill p-2 mb-4" id="email" type="text" placeholder="Email" required>
 
-                        <button class="btn btn-success" type="button" onsubmit="return false" onclick="addContacts()">Add Contact</button>
+                        <button id="addContactButton" class="btn btn-success" type="button" onsubmit="return false" onclick="addContacts()">Add Contact</button>
+                        <button id="editContactButton" class="btn btn-success" type="button" onsubmit="return false" onclick="updateContacts()" style="display: none;">Save Changes</button>
 
                         <span id="contactAddResult"></span>
+                        <span id="contactUpdateResult"></span>
                     </form>
 
                 </div>
