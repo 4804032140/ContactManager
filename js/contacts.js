@@ -57,6 +57,8 @@ function addContacts() {
                 document.getElementById("lastName").value = "";
                 document.getElementById("phone").value = "";
                 document.getElementById("email").value = "";
+
+                searchContacts();
             }
         };
         xhr.send(jsonPayload);
@@ -195,12 +197,18 @@ function updateContacts() {
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("contactUpdateResult").innerHTML = "Contact successfully updated";
+
+                searchContacts();
             }
         };
         xhr.send(jsonPayload);
     } catch (err) {
 
     }
+}
+
+function refreshPage() {
+    window.location.reload();
 }
 
 function deformatNum(number) {
