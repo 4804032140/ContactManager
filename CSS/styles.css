@@ -6,6 +6,10 @@ html {
     background-size: cover;
 }
 
+li a {
+    color: white;
+}
+
 /* .container {
     display: flex;
     justify-content: center;

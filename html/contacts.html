@@ -11,20 +11,20 @@
 </head>
 <body class="row bg-transparent">
 
-    <aside class="col-2 d-flex flex-column text-white bg-primary-subtle flex-shrink-0 p-3">
+    <aside class="col-2 d-flex flex-column text-white bg-secondary-subtle flex-shrink-0 p-3" style="background-color: #ebe9e6;">
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item m-1">
-                <a href="contacts.html" class="nav-link bg-dark-subtle">Contacts</a>
+                <a href="contacts.html" class="nav-link bg-success" style="color: white;">Contacts</a>
             </li>
             <li class="nav-item m-1">
-                <a href="about.html" class="nav-link bg-dark-subtle">About Us</a>
+                <a href="about.html" class="nav-link bg-success" style="color: white;">About Us</a>
             </li>
             <li class="nav-item m-1">
-                <a href="https://github.com/4804032140/ContactManager" target="_blank" class="nav-link bg-dark-subtle">Project Repo</a>
+                <a href="https://github.com/4804032140/ContactManager" target="_blank" class="nav-link bg-success" style="color: white;">Project Repo</a>
             </li>
         </ul>
         <hr>
-        <button type="button" onsubmit="return false" onclick="doLogout()">Log Out</button>
+        <button class="btn btn-secondary rounded-pill" type="button" onsubmit="return false" onclick="doLogout()">Log Out</button>
     </aside>
 
     <header class="bg-transparent col-10 d-flex justify-content-center align-content-center align-items-start">
@@ -72,7 +72,7 @@
                 <i class="bi-arrow-repeat" style="font-size: 2rem;"></i>
             </button>
 
-            <table class="table mw-100">
+            <table class="table table-success mw-100">
                 <thead>
                     <th>ID</th>
                     <th>First Name</th>
