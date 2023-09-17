@@ -1,5 +1,9 @@
 const urlBase = 'http://64.225.60.52/LAMPAPI';
 
+window.onload = (event) => {
+    searchContacts();
+  };
+
 function showAddOffcanvas() {
 
     document.getElementById("contactAddResult").innerHTML = "";
