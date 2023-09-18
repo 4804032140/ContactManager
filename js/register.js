@@ -1,4 +1,4 @@
-const urlBase = 'http://64.225.60.52/';
+const urlBase = 'http://cop4331group2.com/LAMPAPI';
 
 function doRegister() 
 {
