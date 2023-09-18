@@ -13,7 +13,7 @@ function doRegister()
     let tmp = {FirstName: firstName, LastName: lastName, login: login, password: password};
     let jsonPayload = JSON.stringify(tmp);
     
-    let url = urlBase + 'LAMPAPI/AddUser.php';
+    let url = urlBase + '/AddUser.php';
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
